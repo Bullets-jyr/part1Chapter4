@@ -74,12 +74,10 @@
 
     <RadioGroup
         android:id="@+id/blood_type_radio_group"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:gravity="end"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="@id/blood_type_text_view"
-        app:layout_constraintEnd_toStartOf="@id/blood_type_spinner"
         app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="@id/blood_type_text_view">
 
@@ -99,10 +97,11 @@
 
     <Spinner
         android:id="@+id/blood_type_spinner"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@id/blood_type_text_view"
-        app:layout_constraintEnd_toEndOf="@id/name_edit_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/blood_type_radio_group"
         app:layout_constraintTop_toTopOf="@id/blood_type_text_view" />
 
     <TextView
@@ -164,5 +163,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/baseline_edit_24" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/birth_date_layer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="birth_date_value_text_view,birth_date_image_view"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
