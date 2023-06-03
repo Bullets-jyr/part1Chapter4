@@ -30,7 +30,7 @@ class EditActivity : AppCompatActivity() {
 
         binding.birthDateLayer.setOnClickListener {
             val listener = OnDateSetListener { _, year, month, dayOfMonth ->
-                binding.birthDateTextView.text = "$year-${month.inc()}-$dayOfMonth"
+                binding.birthDateValueTextView.text = "$year-${month.inc()}-$dayOfMonth"
             }
             DatePickerDialog(
                 this,
